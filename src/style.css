@@ -53,3 +53,14 @@ button:hover {
   border-radius: 5px;
   display: none;
 }
+
+#joke {
+  margin-top: 15px;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #fff3e0;
+    border-left: 4px solid #ff9800;
+    border-radius: 5px;
+    color: #e65100;
+    font-style: italic;
+}
