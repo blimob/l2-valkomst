@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const name = nameInput.value.trim()
 
     if (name) {
-      meddelandeDiv.innerHTML = `Hej ${name}! välkommen!`
+      meddelandeDiv.innerHTML = `Hej ${name}! välkommen tillbaka till kodandet!`
       meddelandeDiv.style.display = 'block'
     } else {
       alert('Skriv ditt namn först!')
