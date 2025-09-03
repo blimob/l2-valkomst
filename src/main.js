@@ -1,24 +1,27 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+document.addEventListener('DOMContentLoaded', function () {
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+  const nameInput = document.getElementById('name-Input')
+  const knapp = document.getElementById('halsning-btn')
+  const meddelandeDiv = document.getElementById('meddelande')
 
-setupCounter(document.querySelector('#counter'))
+  function skapaHalsning(name) {
+    return `Hej ${name}, välkommen!`
+  }
+
+  knapp.addEventListener('click', function () {
+    const name = nameInput.value.trim()
+
+    if (name) {
+      meddelandeDiv.innerHTML = `Hej ${name}! välkommen!`
+      meddelandeDiv.style.display = 'block'
+    } else {
+      alert('Skriv ditt namn först!')
+    }
+  })
+
+  nameInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      knapp.click()
+    }
+  })
+})
