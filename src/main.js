@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const name = nameInput.value.trim()
 
     if (name) {
-      meddelandeDiv.textContent = `Hej ${name}! välkommen tillbaka till kodandet!`
+      meddelandeDiv.textContent = `Hej ${name}! Välkommen tillbaka till kodandet!`
 
-      jokeDiv.innerHTML = `Knack knack, vem där? ${name}`
+      jokeDiv.textContent = `Knack knack, vem där? ${name}`
 
       meddelandeDiv.style.display = 'block'
       jokeDiv.style.display = 'block'
