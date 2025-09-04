@@ -63,4 +63,5 @@ button:hover {
     border-radius: 5px;
     color: #e65100;
     font-style: italic;
+    display: none;
 }

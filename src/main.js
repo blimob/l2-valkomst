@@ -5,19 +5,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const meddelandeDiv = document.getElementById('meddelande')
   const jokeDiv = document.getElementById('joke')
 
-  // function skapaHalsning(name) {
-  //   return `Hej ${name}, välkommen!`
-  // }
-
   knapp.addEventListener('click', function () {
     const name = nameInput.value.trim()
 
     if (name) {
       meddelandeDiv.textContent = `Hej ${name}! välkommen tillbaka till kodandet!`
 
-      jokeDiv.innerHTML = `Knack knack, ${name}, vem där?`
+      jokeDiv.innerHTML = `Knack knack, vem där? ${name}`
 
       meddelandeDiv.style.display = 'block'
+      jokeDiv.style.display = 'block'
     } else {
       alert('Skriv ditt namn först!')
     }
